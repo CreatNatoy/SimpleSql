@@ -11,7 +11,7 @@ public class DatabaseManager : MonoBehaviour
     private IEnumerator Send() {
         WWWForm form = new WWWForm();
         form.AddField("WelcomeMsg", "Hello, Denis");
-        var www =  new WWW("https://serwer1875431.home.pl/DatabasePractice/index.php", form);
+        var www =  new WWW("link/index.php", form);
         yield return www;
 
         if (www.error != null) {
@@ -25,7 +25,7 @@ public class DatabaseManager : MonoBehaviour
     private IEnumerator SendUnityWeb() {
         WWWForm form = new WWWForm();
         form.AddField("WelcomeMsg", "Hello, Denis");
-        var www =  UnityWebRequest.Post("https://serwer1875431.home.pl/DatabasePractice/index.php", form);
+        var www =  UnityWebRequest.Post("link/index.php", form);
         yield return www.SendWebRequest();
 
         if (www.error != null) {
