@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         form.AddField("login", _currentLogin);
         form.AddField("new_data", _currentCoin);
 
-        UnityWebRequest www = UnityWebRequest.Post("https://serwer1875431.home.pl/DatabasePractice/updateData.php", form);
+        UnityWebRequest www = UnityWebRequest.Post("Link", form);
         yield return www.SendWebRequest();
         
         if(www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
