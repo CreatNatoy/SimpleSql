@@ -25,7 +25,7 @@ public class RegistrationManager : MonoBehaviour
         form.AddField("login", login);
         form.AddField("password", password);
 
-        UnityWebRequest www = UnityWebRequest.Post("https://serwer1875431.home.pl/DatabasePractice/register.php", form);
+        UnityWebRequest www = UnityWebRequest.Post("LINK", form);
         yield return www.SendWebRequest();
 
         if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
